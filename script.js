@@ -1,10 +1,9 @@
 const gameContainer = document.getElementsByClassName("game-container")[0];
-// console.log(gameContainer)
-// console.log(localStorage.getItem("best_score"));
+
 if (localStorage.getItem("best_score") != null) {
     document.querySelector("#bestScore").innerText = localStorage.getItem("best_score");
 } else {
-    localStorage.setItem("best_score", Number.MAX_VALUE);
+    localStorage.setItem("best_score", "None");
 }
 
 const IMAGES = [
@@ -112,7 +111,7 @@ function handleCardClick(event) {
                 gameOver += 2;
                 if (gameOver == gameContainer.querySelectorAll("div").length) {
                     let score = localStorage.getItem("best_score");
-                    if (score > guessCount) {
+                    if (score > guessCount || score == "None") {
                         document.querySelector("#bestScore").innerText = guessCount;
                         localStorage.setItem("best_score", guessCount);
                     }
