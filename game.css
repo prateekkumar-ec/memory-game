@@ -11,7 +11,7 @@ body {
 }
 
 .game-container {
-    flex-basis: 95%;
+    flex-basis: 55%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -50,17 +50,32 @@ body {
 .guess {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.2rem;
 }
 .best-score {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.2rem;
 }
 
 @media (max-width: 450px) {
     .game-container div {
         margin: 0.5rem;
         flex-basis: 17%;
+    }
+    .guess {
+        gap: 0rem;
+    }
+    .best-score {
+        gap: 0rem;
+    }
+    .game-container {
+        flex-basis: 95%;
+    }
+    .game-bar-left {
+        flex-basis: 50%;
+    }
+    .game-bar-left {
+        gap: 1rem;
     }
 }

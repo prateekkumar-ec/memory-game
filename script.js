@@ -15,8 +15,6 @@ const IMAGES = [
     "./gifs/6.gif",
     "./gifs/7.gif",
     "./gifs/8.gif",
-    "./gifs/9.gif",
-    "./gifs/10.gif",
     "./gifs/1.gif",
     "./gifs/2.gif",
     "./gifs/3.gif",
@@ -25,8 +23,6 @@ const IMAGES = [
     "./gifs/6.gif",
     "./gifs/7.gif",
     "./gifs/8.gif",
-    "./gifs/9.gif",
-    "./gifs/10.gif",
 ];
 
 // here is a helper function to shuffle an array
