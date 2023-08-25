@@ -58,6 +58,12 @@ body {
     gap: 0.2rem;
 }
 
+@media (max-width: 600px) {
+    .game-container {
+        flex-basis: 85%;
+    }
+}
+
 @media (max-width: 450px) {
     .game-container div {
         margin: 0.5rem;
