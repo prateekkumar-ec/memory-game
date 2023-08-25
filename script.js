@@ -1,7 +1,34 @@
 const gameContainer = document.getElementsByClassName("game-container")[0];
 // console.log(gameContainer)
+// console.log(localStorage.getItem("best_score"));
+if (localStorage.getItem("best_score") != null) {
+    document.querySelector("#bestScore").innerText = localStorage.getItem("best_score");
+} else {
+    localStorage.setItem("best_score", Number.MAX_VALUE);
+}
 
-const COLORS = ["red", "blue", "green", "orange", "purple", "red", "blue", "green", "orange", "purple"];
+const IMAGES = [
+    "./gifs/1.gif",
+    "./gifs/2.gif",
+    "./gifs/3.gif",
+    "./gifs/4.gif",
+    "./gifs/5.gif",
+    "./gifs/6.gif",
+    "./gifs/7.gif",
+    "./gifs/8.gif",
+    "./gifs/9.gif",
+    "./gifs/10.gif",
+    "./gifs/1.gif",
+    "./gifs/2.gif",
+    "./gifs/3.gif",
+    "./gifs/4.gif",
+    "./gifs/5.gif",
+    "./gifs/6.gif",
+    "./gifs/7.gif",
+    "./gifs/8.gif",
+    "./gifs/9.gif",
+    "./gifs/10.gif",
+];
 
 // here is a helper function to shuffle an array
 // it returns the same array with values shuffled
@@ -26,19 +53,20 @@ function shuffle(array) {
     return array;
 }
 
-let shuffledColors = shuffle(COLORS);
+let shuffledImages = shuffle(IMAGES);
 
 // this function loops over the array of colors
 // it creates a new div and gives it a class with the value of the color
 // it also adds an event listener for a click for each card
-function createDivsForColors(colorArray) {
-    for (let color of colorArray) {
+function createDivsForColors(imageArray) {
+    for (let image of imageArray) {
         // create a new div
         const newDiv = document.createElement("div");
-        newDiv.style.background = color;
+        let url = "url(" + image + ")";
+        newDiv.style.backgroundImage = url;
 
         // give it a class attribute for the value we are looping over
-        newDiv.classList.add(color);
+        newDiv.classList.add(image);
         newDiv.classList.add("hide");
 
         // call a function handleCardClick when a div is clicked on
@@ -50,31 +78,57 @@ function createDivsForColors(colorArray) {
 }
 
 // TODO: Implement this function!
-
+let guessCount = 0;
 let count = 0;
 let firstCard;
 let secondCard;
+let guessMade = document.querySelector("#guessMade");
+let gameOver = 0;
 function handleCardClick(event) {
     // you can use event.target to see which element was clicked
-    console.log(event.target);
+    let card = event.target;
+    if (card.classList.contains("hide") == false) {
+        return;
+    }
     if (count < 1) {
         firstCard = event.target;
         firstCard.classList.remove("hide");
         count++;
+        guessCount++;
+        guessMade.innerText = guessCount;
     } else if (count < 2) {
         secondCard = event.target;
         secondCard.classList.remove("hide");
         count++;
+        guessCount++;
+        guessMade.innerText = guessCount;
+
         setTimeout(() => {
             if (firstCard.getAttribute("class") != secondCard.getAttribute("class")) {
                 firstCard.classList.add("hide");
                 secondCard.classList.add("hide");
-                console.log(firstCard, secondCard);
+                // console.log(firstCard, secondCard);
+            } else {
+                gameOver += 2;
+                if (gameOver == gameContainer.querySelectorAll("div").length) {
+                    let score = localStorage.getItem("best_score");
+                    if (score > guessCount) {
+                        document.querySelector("#bestScore").innerText = guessCount;
+                        localStorage.setItem("best_score", guessCount);
+                    }
+                }
             }
             count = 0;
         }, 1 * 1000);
     }
 }
 
+let restart = document.querySelector("#restart");
+console.log(restart);
+
+restart.addEventListener("click", (event) => {
+    location.assign("game.html");
+});
+
 // when the DOM loads
-createDivsForColors(shuffledColors);
+createDivsForColors(shuffledImages);
