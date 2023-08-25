@@ -1,7 +1,40 @@
- #game div {
-  border: 1px solid black;
-  width: 15%;
-  height: 200px;
-  margin: 10px;
-  display: inline-block;
-} 
+/* global   */
+a {
+    text-decoration: none;
+}
+
+/* header  */
+header {
+    display: flex;
+    background: #614bc3;
+    justify-content: center;
+}
+header h1 {
+    color: white;
+}
+body {
+    background: #33bbc5;
+}
+
+.head-line {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.head-line h1 {
+    font-size: 6rem;
+}
+
+.start-button {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    padding: 2rem 3rem;
+    background: #614bc3;
+    border-radius: 5px;
+}
+.button a {
+    font-size: 3rem;
+    color: white;
+}

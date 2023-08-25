@@ -1,0 +1,30 @@
+body {
+    background: #dfccfb;
+}
+
+/* game containers  */
+
+.game-container-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    margin-top: 3.1rem;
+    flex-basis: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.game-container div {
+    background: white;
+    margin: 1rem;
+    flex-basis: 17%;
+    height: 25vh;
+    border-radius: 9px;
+}
+.hide {
+    background: white !important;
+    transition: 2s ease-in-out;
+}
