@@ -19,10 +19,14 @@ body {
 .head-line {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 5rem;
 }
 .head-line h1 {
-    font-size: 6rem;
+    flex-basis: 80%;
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
 }
 
 .start-button {
@@ -37,4 +41,38 @@ body {
 .button a {
     font-size: 3rem;
     color: white;
+}
+
+@media (max-width: 550px) {
+    .head-line h1 {
+        font-size: 2rem;
+    }
+    .button {
+        padding: 0.5rem 1rem;
+        background: #614bc3;
+        border-radius: 5px;
+    }
+    .button a {
+        font-size: 2.6rem;
+        color: white;
+    }
+}
+
+@media (max-width: 450px) {
+    .head-line h1 {
+        font-size: 2rem;
+    }
+    .start-button {
+        display: flex;
+        justify-content: center;
+    }
+    .button {
+        padding: 0.5rem 1rem;
+        background: #614bc3;
+        border-radius: 5px;
+    }
+    .button a {
+        font-size: 2rem;
+        color: white;
+    }
 }
