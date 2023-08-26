@@ -60,7 +60,7 @@ body {
 
 @media (max-width: 600px) {
     .game-container {
-        flex-basis: 85%;
+        flex-basis: 100%;
     }
 }
 
@@ -76,7 +76,7 @@ body {
         gap: 0rem;
     }
     .game-container {
-        flex-basis: 95%;
+        flex-basis: 100%;
     }
     .game-bar-left {
         flex-basis: 50%;

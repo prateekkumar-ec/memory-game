@@ -6,24 +6,13 @@ if (localStorage.getItem("best_score") != null) {
     localStorage.setItem("best_score", "None");
 }
 
-const IMAGES = [
-    "./gifs/1.gif",
-    "./gifs/2.gif",
-    "./gifs/3.gif",
-    "./gifs/4.gif",
-    "./gifs/5.gif",
-    "./gifs/6.gif",
-    "./gifs/7.gif",
-    "./gifs/8.gif",
-    "./gifs/1.gif",
-    "./gifs/2.gif",
-    "./gifs/3.gif",
-    "./gifs/4.gif",
-    "./gifs/5.gif",
-    "./gifs/6.gif",
-    "./gifs/7.gif",
-    "./gifs/8.gif",
-];
+let IMAGES = ["./gifs/1.gif", "./gifs/2.gif", "./gifs/3.gif", "./gifs/4.gif", "./gifs/5.gif", "./gifs/6.gif", "./gifs/7.gif", "./gifs/8.gif", "./gifs/9.gif", "./gifs/10.gif"];
+
+let rows = localStorage.getItem("rows");
+let images_count = (rows * 4) / 2;
+IMAGES = IMAGES.slice(0, images_count);
+
+IMAGES = IMAGES.concat(IMAGES);
 
 // here is a helper function to shuffle an array
 // it returns the same array with values shuffled
@@ -107,7 +96,7 @@ function handleCardClick(event) {
                 gameOver += 2;
                 if (gameOver == gameContainer.querySelectorAll("div").length) {
                     let score = localStorage.getItem("best_score");
-                    if (score > guessCount || score == "None") {
+                    if (score > guessCount || score == 0) {
                         document.querySelector("#bestScore").innerText = guessCount;
                         localStorage.setItem("best_score", guessCount);
                     }
@@ -119,11 +108,9 @@ function handleCardClick(event) {
 }
 
 let restart = document.querySelector("#restart");
-console.log(restart);
-
 restart.addEventListener("click", (event) => {
     location.assign("game.html");
 });
 
-// when the DOM loads
 createDivsForColors(shuffledImages);
+// when the DOM loads

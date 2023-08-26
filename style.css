@@ -26,7 +26,7 @@ body {
     flex-basis: 80%;
     display: flex;
     justify-content: center;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .start-button {
@@ -55,6 +55,14 @@ body {
     .button a {
         font-size: 2.6rem;
         color: white;
+    }
+
+    .custom-cards-button {
+        background: #5c5470;
+        color: white;
+        padding: 1rem 1.3rem;
+        font-size: 1rem;
+        border-radius: 7px;
     }
 }
 
