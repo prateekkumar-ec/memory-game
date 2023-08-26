@@ -99,6 +99,11 @@ function handleCardClick(event) {
                     if (score > guessCount || score == 0) {
                         document.querySelector("#bestScore").innerText = guessCount;
                         localStorage.setItem("best_score", guessCount);
+                        let restart = document.querySelector("#restart");
+                        restart.classList.remove("noDisplay");
+                        restart.addEventListener("click", (event) => {
+                            location.assign("game.html");
+                        });
                     }
                 }
             }
@@ -106,11 +111,6 @@ function handleCardClick(event) {
         }, 1 * 1000);
     }
 }
-
-let restart = document.querySelector("#restart");
-restart.addEventListener("click", (event) => {
-    location.assign("game.html");
-});
 
 createDivsForColors(shuffledImages);
 // when the DOM loads

@@ -85,3 +85,7 @@ body {
         gap: 1rem;
     }
 }
+
+.noDisplay {
+    display: none;
+}
