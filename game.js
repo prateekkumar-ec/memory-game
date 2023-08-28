@@ -96,7 +96,7 @@ function handleCardClick(event) {
                 gameOver += 2;
                 if (gameOver == gameContainer.querySelectorAll("div").length) {
                     let score = localStorage.getItem("best_score");
-                    if (score > guessCount || score == 0) {
+                    if (score >= guessCount || score == 0) {
                         document.querySelector("#bestScore").innerText = guessCount;
                         localStorage.setItem("best_score", guessCount);
                         let restart = document.querySelector("#restart");
