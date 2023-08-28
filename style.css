@@ -13,11 +13,11 @@ header {
 }
 header h1 {
     color: white;
+    font-size: 2rem;
 }
 body {
     background: #33bbc5;
 }
-
 .head-line {
     display: flex;
     justify-content: center;
@@ -34,6 +34,7 @@ body {
 .start-button {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 .button {
     padding: 2rem 3rem;
