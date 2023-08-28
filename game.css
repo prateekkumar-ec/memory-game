@@ -68,6 +68,7 @@ body {
     .game-container div {
         margin: 0.5rem;
         flex-basis: 17%;
+        height: 12vh;
     }
     .guess {
         gap: 0rem;
