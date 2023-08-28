@@ -107,6 +107,9 @@ function handleCardClick(event) {
                     }
                     let restart = document.querySelector("#restart");
                     restart.classList.remove("noDisplay");
+                    restart.addEventListener("click", (event) => {
+                        location.assign("game.html");
+                    });
                 }
             }
             count = 0;
