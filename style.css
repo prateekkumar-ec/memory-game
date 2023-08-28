@@ -8,6 +8,8 @@ header {
     display: flex;
     background: #614bc3;
     justify-content: center;
+    align-items: center;
+    height: 8vh;
 }
 header h1 {
     color: white;
