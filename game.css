@@ -21,15 +21,15 @@ body {
 .game-container div {
     margin: 1rem;
     flex-basis: 17%;
-    height: 19vh;
+    height: 18vh;
     border-radius: 9px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .hide {
     background: url("./images/pngtree-tarot-card-divination-mysterious-eyes-png-image_3833480.jpg") no-repeat !important;
-    background-size: 100% 100% !important;
-    transition: 2s ease-in;
+    background-size: 101% 100% !important;
+    transition: 1s ease-in;
     transition: 0.5s ease-out;
 }
 
@@ -73,14 +73,14 @@ body {
     top: 20%;
     left: 20%;
     right: 20%;
-    color: #efe1d1;
+    color: #e9da91;
     display: flex;
     font-size: 2.5rem;
     justify-content: center;
 }
 .confirm-decide {
     padding: 3rem;
-    background: #003c6e;
+    background: #010004;
     border-radius: 7px;
     box-shadow: 0 0 5000px 50px rgb(54, 54, 54);
     display: flex;
