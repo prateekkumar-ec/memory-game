@@ -2,21 +2,31 @@
 a {
     text-decoration: none;
 }
+li {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+}
 
 /* header  */
 header {
     display: flex;
-    background: #614bc3;
     justify-content: center;
     align-items: center;
     height: 8vh;
+    padding-top: 5rem;
 }
 header h1 {
     color: white;
-    font-size: 2rem;
+    font-size: 5rem;
+    font-family: Akronim;
+    font-weight: 400;
 }
 body {
-    background: #33bbc5;
+    background: url("./images/dark-background.jpg") no-repeat;
+    background-position-y: -10vh;
+
+    font-family: "Spicy Rice";
 }
 .head-line {
     display: flex;
@@ -25,7 +35,6 @@ body {
     margin-top: 5rem;
 }
 .head-line h1 {
-    flex-basis: 80%;
     display: flex;
     justify-content: center;
     font-size: 3rem;
@@ -37,53 +46,78 @@ body {
     margin-top: 2rem;
 }
 .button {
-    padding: 2rem 3rem;
-    background: #614bc3;
     border-radius: 5px;
 }
 .button a {
     font-size: 3rem;
-    color: white;
+    color: #efe1d1;
+    cursor: default;
 }
-
-@media (max-width: 550px) {
-    .head-line h1 {
-        font-size: 2rem;
-    }
-    .button {
-        padding: 0.5rem 1rem;
-        background: #614bc3;
-        border-radius: 5px;
-    }
-    .button a {
-        font-size: 2.6rem;
-        color: white;
-    }
-
-    .custom-cards-button {
-        background: #5c5470;
-        color: white;
-        padding: 1rem 1.3rem;
-        font-size: 1rem;
-        border-radius: 7px;
-    }
+.difficulty {
+    margin-top: 1rem;
+    cursor: default;
+    color: #efe1d1;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.difficulty-menu {
+    display: flex;
+    justify-content: center;
+}
+.difficulty-menu ul {
+    flex-basis: 30%;
+    border-radius: 7px;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    cursor: default;
+    color: #efe1d1;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.difficulty-menu p {
+    display: block;
 }
 
 @media (max-width: 450px) {
-    .head-line h1 {
-        font-size: 2rem;
+    header h1 {
+        font-size: 4rem;
     }
-    .start-button {
-        display: flex;
-        justify-content: center;
+    .head-line {
+        margin-top: 3rem;
     }
+
     .button {
-        padding: 0.5rem 1rem;
-        background: #614bc3;
         border-radius: 5px;
     }
     .button a {
         font-size: 2rem;
-        color: white;
     }
+    .difficulty {
+        font-size: 2rem;
+    }
+
+    .difficulty-menu ul {
+        flex-basis: 30%;
+        border-radius: 7px;
+        margin-top: 2rem;
+        padding: 1rem 0;
+        cursor: default;
+        color: #efe1d1;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .difficulty-menu p {
+        display: block;
+    }
+}
+
+.noDisplay {
+    display: none;
 }

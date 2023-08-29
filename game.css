@@ -1,5 +1,7 @@
 body {
-    background: #dfccfb;
+    background: linear-gradient(rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0)), url("./images/984942.png") no-repeat;
+    background-size: 100% 100vh;
+    font-family: "Spicy Rice";
 }
 
 /* game containers  */
@@ -32,8 +34,10 @@ body {
 }
 
 /* game -bar  */
-#restart {
-    padding: 0.5rem 1.5rem;
+.restart-button {
+    color: #efe1d1;
+    font-size: 2.5rem;
+    cursor: default;
 }
 
 .game-bar {
@@ -42,52 +46,80 @@ body {
     justify-content: space-around;
     margin-top: 1rem;
 }
-.game-bar-left {
-    flex-basis: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 .guess {
+    color: #efe1d1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 0.2rem;
 }
 .best-score {
+    color: #efe1d1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 0.2rem;
 }
+.guess,
+.best-score {
+    font-size: 2rem;
+}
 
-@media (max-width: 600px) {
-    .game-container {
-        flex-basis: 100%;
-    }
-    .game-bar-left {
-        flex-basis: 50%;
-    }
+/* restart-confirmation  */
+
+.restart-confirmation {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    color: #efe1d1;
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+}
+.confirm-decide {
+    padding: 3rem;
+    background: #003c6e;
+    border-radius: 7px;
+    box-shadow: 0 0 5000px 50px rgb(54, 54, 54);
+    display: flex;
+    flex-direction: column;
+}
+.yes-no {
+    display: flex;
+    justify-content: space-around;
+}
+.yes-no p {
+    cursor: default;
+    display: inline-block;
 }
 
 @media (max-width: 450px) {
+    body {
+        background-size: 170% 100vh;
+    }
     .game-container div {
         margin: 0.5rem;
-        flex-basis: 17%;
+        flex-basis: 20%;
         height: 12vh;
     }
-    .guess {
-        gap: 0rem;
-    }
+    .guess,
     .best-score {
-        gap: 0rem;
+        font-size: 1rem;
+    }
+    .restart-button {
+        font-size: 1.3rem;
     }
     .game-container {
-        flex-basis: 100%;
+        margin-top: 2rem;
+        flex-basis: 90%;
     }
-    .game-bar-left {
-        flex-basis: 50%;
-    }
-    .game-bar-left {
-        gap: 1rem;
+    .restart-confirmation {
+        font-size: 1.5rem;
+        justify-content: center;
+        left: 10%;
+        right: 10%;
     }
 }
 

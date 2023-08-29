@@ -99,17 +99,7 @@ function handleCardClick(event) {
                     if (score >= guessCount || score == 0) {
                         document.querySelector("#bestScore").innerText = guessCount;
                         localStorage.setItem("best_score", guessCount);
-                        let restart = document.querySelector("#restart");
-                        restart.classList.remove("noDisplay");
-                        restart.addEventListener("click", (event) => {
-                            location.assign("game.html");
-                        });
                     }
-                    let restart = document.querySelector("#restart");
-                    restart.classList.remove("noDisplay");
-                    restart.addEventListener("click", (event) => {
-                        location.assign("game.html");
-                    });
                 }
             }
             count = 0;
@@ -117,5 +107,22 @@ function handleCardClick(event) {
     }
 }
 
+let restart = document.querySelector("#restart");
+restart.classList.remove("noDisplay");
+restart.addEventListener("click", (event) => {
+    let decision_menu = document.querySelector(".restart-confirmation");
+    decision_menu.classList.remove("noDisplay");
+    let decision = document.querySelector(".yes-no");
+    decision.addEventListener("click", take_decision);
+});
+
+function take_decision(event) {
+    if (event.target.innerText == "Yes") {
+        location.assign("game.html");
+    } else if (event.target.innerText == "No") {
+        let decision_menu = document.querySelector(".restart-confirmation");
+        decision_menu.classList.add("noDisplay");
+    }
+}
 createDivsForColors(shuffledImages);
 // when the DOM loads

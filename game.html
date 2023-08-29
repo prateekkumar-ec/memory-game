@@ -8,39 +8,47 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="game.css" />
-    <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Spicy+Rice&display=swap" rel="stylesheet">
 
-    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Memory Game!</h1>
-    </header>
 
     <div class="game-bar">
-        <div>
-            <button class="noDisplay" id="restart">Restart</button>
+        <div class="restart-button">
+            <p id="restart">Restart</p>
         </div>
-        <div class="game-bar-left">
-            <div class="best-score">
-                <p> Best Score:</p>
-                <div id="bestScore"></div>
-            </div>
-            <div class="guess">
-                <p>Guess Made: </p>
-                <div id="guessMade">0</div>
-            </div>
+
+        <div class="guess">
+            <p>Guess Made</p>
+            <div id="guessMade">0</div>
+        </div>
+
+        <div class="best-score">
+            <p> Best Score</p>
+            <div id="bestScore"></div>
         </div>
 
     </div>
 
+    <div class="restart-confirmation noDisplay">
+        <div class="confirm-decide">
+            <p>Are you sure?</p>
+            <div class="yes-no">
+                <p>Yes</p>
+                <p>No</p>
+            </div>
+        </div>
+    </div>
 
     <section class="game-container-outer">
         <div class="game-container">
 
         </div>
     </section>
+
 
 
 
