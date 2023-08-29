@@ -19,16 +19,16 @@ body {
     justify-content: center;
 }
 .game-container div {
-    background: white;
     margin: 1rem;
     flex-basis: 17%;
-    height: 15vh;
+    height: 19vh;
     border-radius: 9px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .hide {
-    background: white !important;
+    background: url("./images/pngtree-tarot-card-divination-mysterious-eyes-png-image_3833480.jpg") no-repeat !important;
+    background-size: 100% 100% !important;
     transition: 2s ease-in;
     transition: 0.5s ease-out;
 }
